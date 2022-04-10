@@ -13,7 +13,7 @@ const UsersListPage = observer(({checkAuth}) => {
         getUsers().then((data) => {
             users.setUsers(data.users)
         })
-    }, [users])
+    }, )
     const selectAll = async () => {
         await checkAuth()
         if (!selectAllValue) {
