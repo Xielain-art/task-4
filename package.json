@@ -1,0 +1,33 @@
+{
+  "name": "task-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "client:install": "npm install --prefix client --force",
+    "client:build": "npm run build --prefix client",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Ratmir Klimow <rklimow409@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-favicon": "^2.0.1",
+    "express-validator": "^6.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.18.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.15"
+  }
+}
